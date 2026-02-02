@@ -25,18 +25,15 @@ class Stack64U
 
     public int Pop()
     {
+         if (top == stack.Length/2) Resize(stack.Length / 2);
+
         if (top == -1) throw new Exception("The array is empty");
 
-        top--;
-
-        // Shrink when usage is low: when size <= 1/4 of capacity
-        if (stack.Length > 1 && (top + 1) <= stack.Length / 4)
+        else
         {
-            int newCapacity = Math.Max(stack.Length / 2, 1);
-            Resize(newCapacity);
+            top--;
+            return 1;
         }
-
-        return 1;
     }
 
     public ulong Peek()
