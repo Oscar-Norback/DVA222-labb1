@@ -2,7 +2,7 @@ using System;
 
 class Stack64U
 {
-     private ulong[] stack = new ulong[5];
+    private ulong[] stack = new ulong[5];
     private ulong[] minimum = new ulong[5];
     private long top = -1;
 
@@ -25,7 +25,7 @@ class Stack64U
 
     public int Pop()
     {
-         if (top == stack.Length/2) Resize(stack.Length / 2);
+        if (top == stack.Length/2) Resize(stack.Length / 2);
 
         if (top == -1) throw new Exception("The array is empty");
 
@@ -56,7 +56,7 @@ class Stack64U
 
     }
 
-    public int? MinValue()
+    public int MinValue()
     {
         if (top != -1) return (int)minimum[top];
         else throw new Exception("The array is empty");
