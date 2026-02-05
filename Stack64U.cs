@@ -2,9 +2,16 @@ using System;
 
 class Stack64U
 {
-    private ulong[] stack = new ulong[5];
-    private ulong[] minimum = new ulong[5];
-    private long top = -1;
+    private ulong[] stack;
+    private ulong[] minimum;
+    private int top;
+
+    public Stack64U()
+    {
+        stack = new ulong[10];
+        minimum = new ulong[10];
+        top = -1;
+    }
 
     public ulong Push(ulong value)
     {

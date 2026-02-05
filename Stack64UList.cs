@@ -3,8 +3,15 @@ using System.Collections.Generic;
 
 public class Stack64UList
 {
-    private List<ulong> stack = new List<ulong>();
-    private List<ulong> minimum = new List<ulong>();
+    private List<ulong> stack;
+    private List<ulong> minimum;
+
+    public Stack64UList()
+    {
+        stack = new List<ulong>();
+        minimum = new List<ulong>();
+
+    }
 
     public void Push(ulong value)
     {
